@@ -21,6 +21,9 @@ public class LinkedListStack {
         theList.displayLink();
     }
 
+    public void priorityPop(int i){
+        theList.deletePriority(i);
+    }
 
     public boolean isEmpty(){
         return (theList.isEmpty());

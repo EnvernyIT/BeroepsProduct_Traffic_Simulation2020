@@ -175,84 +175,112 @@ public class Wegdek {
         voertuigenStack.displayStack();
     }
 
+   /* public void terugRijden(int i){
+        switch (i){
+            case
+        }
+    }*/
+
     public void terugRijden7(){
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
     }
 
     public void terugRijden5(){
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
     }
     public void terugRijden4(){
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
     }
     public void terugRijden3(){
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
     }
     public void terugRijden2(){
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
     }
     public void terugRijden1() {
         voertuigenStack.peek();
         System.out.println("Mag terug op zijn plaats.");
         voertuigenStack.pop();
+        aantalVoertuigenStack--;
     }
 
     public int getAantalVoertuigen() {
@@ -281,5 +309,10 @@ public class Wegdek {
 
     public int getAantalVoertuigenStack() {
         return aantalVoertuigenStack;
+    }
+
+    public void removePriorityVoertuigStack(int i){
+        voertuigenStack.priorityPop(i);
+        aantalVoertuigenStack--;
     }
 }

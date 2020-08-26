@@ -62,12 +62,12 @@ public class App {
         WEGDEK[3].insertVoertuig(new Voertuig(14, 4));
 
         SimulatieVerkeerService svs = new SimulatieVerkeerService();
-        System.out.println("Aantal voertuigen van Wegdek "+WEGDEK[0].getWegdekNaam()+" is "+WEGDEK[0].getAantalVoertuigen());
-        System.out.println("Aantal voertuigen van Wegdek "+WEGDEK[1].getWegdekNaam()+" is "+WEGDEK[1].getAantalVoertuigen());
-        System.out.println("Aantal voertuigen van Wegdek "+WEGDEK[2].getWegdekNaam()+" is "+WEGDEK[2].getAantalVoertuigen());
-        System.out.println("Aantal voertuigen van Wegdek "+WEGDEK[3].getWegdekNaam()+" is "+WEGDEK[3].getAantalVoertuigen());
+        System.out.println("Aantal voertuigen van Wegdek " + WEGDEK[0].getWegdekNaam() + " is " + WEGDEK[0].getAantalVoertuigen());
+        System.out.println("Aantal voertuigen van Wegdek " + WEGDEK[1].getWegdekNaam() + " is " + WEGDEK[1].getAantalVoertuigen());
+        System.out.println("Aantal voertuigen van Wegdek " + WEGDEK[2].getWegdekNaam() + " is " + WEGDEK[2].getAantalVoertuigen());
+        System.out.println("Aantal voertuigen van Wegdek " + WEGDEK[3].getWegdekNaam() + " is " + WEGDEK[3].getAantalVoertuigen());
         System.out.println(" ");
-       //Display Voertuigen Queue
+        //Display Voertuigen Queue
         svs.displayVoertuigenQueue(WEGDEK[0]);
         svs.displayVoertuigenQueue(WEGDEK[1]);
         svs.displayVoertuigenQueue(WEGDEK[2]);
@@ -87,46 +87,11 @@ public class App {
         svs.displayVoertuigenQueue(WEGDEK[2]);
         svs.displayVoertuigenQueue(WEGDEK[3]);
 
-       if(WEGDEK.length>0) {
-            //Default Traffic Simulation
+        while(WEGDEK[0].getAantalVoertuigen()>0||WEGDEK[1].getAantalVoertuigen()>0||WEGDEK[2].getAantalVoertuigen()>0||WEGDEK[3].getAantalVoertuigen()>0){
             svs.runTraffic(WEGDEK[0]);
             svs.runTraffic(WEGDEK[1]);
             svs.runTraffic(WEGDEK[2]);
             svs.runTraffic(WEGDEK[3]);
-        }else {
-            //Display Voertuigen Queue
-            svs.displayVoertuigenQueue(WEGDEK[0]);
-            svs.displayVoertuigenQueue(WEGDEK[1]);
-            svs.displayVoertuigenQueue(WEGDEK[2]);
-            svs.displayVoertuigenQueue(WEGDEK[3]);
-        }
-
-        if(WEGDEK.length>0) {
-            //Default Traffic Simulation
-            svs.runTraffic(WEGDEK[0]);
-            svs.runTraffic(WEGDEK[1]);
-            svs.runTraffic(WEGDEK[2]);
-            svs.runTraffic(WEGDEK[3]);
-        }else {
-            //Display Voertuigen Queue
-            svs.displayVoertuigenQueue(WEGDEK[0]);
-            svs.displayVoertuigenQueue(WEGDEK[1]);
-            svs.displayVoertuigenQueue(WEGDEK[2]);
-            svs.displayVoertuigenQueue(WEGDEK[3]);
-        }
-
-        if(WEGDEK.length>0) {
-            //Default Traffic Simulation
-            svs.runTraffic(WEGDEK[0]);
-            svs.runTraffic(WEGDEK[1]);
-            svs.runTraffic(WEGDEK[2]);
-            svs.runTraffic(WEGDEK[3]);
-        }else {
-            //Display Voertuigen Queue
-            svs.displayVoertuigenQueue(WEGDEK[0]);
-            svs.displayVoertuigenQueue(WEGDEK[1]);
-            svs.displayVoertuigenQueue(WEGDEK[2]);
-            svs.displayVoertuigenQueue(WEGDEK[3]);
         }
 
         //Display Voertuigen Queue
@@ -137,12 +102,12 @@ public class App {
 
         int i = svs.getWegdekRondeTeller();
         int k = svs.getWegdekOverslaanTeller();
-        double j = k/2;
+        double j = k / 2;
         System.out.println(" ");
-        System.out.println("Totale Rondes: "+j+" keren.");
-        System.out.println("Aantal keren dat de stoplichten zijn gegaan: "+i);
+        System.out.println("Totale Rondes: " + j + " keren.");
+        System.out.println("Aantal keren dat de stoplichten zijn gegaan: " + i);
         System.out.println(" ");
-        System.out.println("--------------------Einde Traffic Simulation--------------------");
+        System.out.println("-------------------------Einde Traffic Simulation-------------------------");
         System.out.println(" ");
 
         //Reverse Play-----------------------------------------------------------------------------------------------
@@ -151,56 +116,18 @@ public class App {
         System.out.println("--------------------Begin Reverse Traffic Simulation Play-------------------- ");
         System.out.println(" ");
         System.out.println(" ");
-        //wonz-3210
 
-        svs.reverseString(WEGDEK[3]);
-        System.out.println(" ");
-        svs.reverseString(WEGDEK[2]);
-        System.out.println(" ");
-        System.out.println("NOORDEN");
-        WEGDEK[1].terugRijden2();
-        System.out.println(" ");
-        svs.reverseString(WEGDEK[0]);
-        System.out.println(" ");
-        System.out.println("WESTEN");
-        WEGDEK[3].terugRijden3();
-        System.out.println(" ");
-        svs.reverseString(WEGDEK[2]);
-        System.out.println(" ");
-        System.out.println("NOORDEN");
-        WEGDEK[1].terugRijden5();
-        System.out.println(" ");
-        svs.reverseString(WEGDEK[0]);
-        System.out.println(" ");
-        System.out.println("WESTEN");
-        WEGDEK[3].terugRijden5();
-        System.out.println(" ");
-        System.out.println("WESTEN");
-        WEGDEK[3].terugRijden5();
-        System.out.println(" ");
-        System.out.println("OOSTEN");
-        WEGDEK[2].terugRijden5();
-        System.out.println(" ");
-        System.out.println("NOORDEN");
-        WEGDEK[1].terugRijden5();
-        System.out.println(" ");
-        System.out.println("NOORDEN");
-        WEGDEK[1].terugRijden5();
-        System.out.println(" ");
-        System.out.println("ZUIDEN");
-        WEGDEK[0].terugRijden3();
-        System.out.println(" ");
-        System.out.println("WESTEN");
-        WEGDEK[3].terugRijden1();
-        System.out.println(" ");
-        System.out.println("ZUIDEN");
-        WEGDEK[0].terugRijden1();
-        System.out.println(" ");
-        System.out.println("Noorden");
-        WEGDEK[1].terugRijden1();
-        System.out.println(" ");
+        svs.terugOprijdenAmbulanceStack(WEGDEK[0]);
+        svs.terugOprijdenBrandweerStack(WEGDEK[1]);
+        svs.terugOprijdenPolitieStack(WEGDEK[3]);
 
-        svs.eindeReverse();
+        while(WEGDEK[3].getAantalVoertuigenStack()>0||WEGDEK[2].getAantalVoertuigenStack()>0||WEGDEK[1].getAantalVoertuigenStack()>0||WEGDEK[0].getAantalVoertuigenStack()>0) {
+            svs.runReverseTraffic(WEGDEK[3]);
+            svs.runReverseTraffic(WEGDEK[2]);
+            svs.runReverseTraffic(WEGDEK[1]);
+            svs.runReverseTraffic(WEGDEK[0]);
         }
-
+        //Einde Reverse
+       svs.eindeReverse();
+    }
 }
